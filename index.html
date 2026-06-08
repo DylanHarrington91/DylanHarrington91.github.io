@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Harrington | Writer & Advocate</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'EB Garamond', Georgia, "Times New Roman", serif;
+            font-size: 14pt; 
+            line-height: 1.6;
+            color: #111111; 
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            padding: 0;
+            background-color: #e6e6e4; 
+
+            background-image: 
+                radial-gradient(ellipse at 25% 15%, rgba(10, 10, 15, 0.15) 0%, rgba(10, 10, 15, 0.03) 30%, transparent 45%),
+                radial-gradient(circle at 75% 65%, rgba(15, 10, 10, 0.2) 0%, rgba(15, 10, 10, 0.05) 30%, transparent 55%),
+                radial-gradient(circle at 40% 85%, rgba(5, 5, 5, 0.15) 0%, rgba(5, 5, 5, 0.03) 25%, transparent 40%),
+                radial-gradient(circle at 15% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 20%),
+                radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.8) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.7) 0%, transparent 15%),
+                radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.7) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.8) 0%, transparent 15%);
+            
+            background-size: 100% 100%;
+            background-attachment: fixed; 
+        }
+
+        .texture-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none; 
+            z-index: 9999; 
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.02' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
+            mix-blend-mode: multiply; 
+            opacity: 0.3; 
+            backdrop-filter: blur(0.5px) contrast(1.1);
+            -webkit-backdrop-filter: blur(0.5px) contrast(1.1); 
+            animation: drift 150s linear infinite; 
+        }
+
+        @keyframes drift { from { background-position: 0 0; } to { background-position: 0 100%; } }
+
+        /* ARTIFACT POETIC DISTORTIONS */
+        .blur-word {
+            color: transparent;
+            text-shadow: 0 0 4.5px rgba(17, 17, 17, 0.75);
+            user-select: none; 
+            transition: text-shadow 0.5s ease;
+        }
+        .blur-word:hover {
+            text-shadow: 0 0 1px rgba(17, 17, 17, 0.9);
+        }
+
+        .ghost-highlight {
+            background-color: rgba(255, 255, 255, 0.65);
+            padding: 0 4px;
+            border-radius: 2px;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+        }
+
+        .heavy-press {
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        /* BLACKLIST EPIGRAPH */
+        .epigraph-container {
+            font-family: Georgia, serif;
+            text-align: center;
+            margin: 2.5rem auto;
+            max-width: 500px;
+            padding: 0 10px;
+        }
+        .epigraph-text {
+            font-style: italic;
+            font-size: 1.15rem;
+            line-height: 1.5;
+            color: #222222;
+            margin-bottom: 0.5rem;
+        }
+        .epigraph-source {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: #444444;
+            text-transform: uppercase;
+        }
+
+        /* FEATURED FORTHCOMING ENTRY */
+        .featured-forthcoming {
+            border: 1px dashed #555555;
+            padding: 12px 16px;
+            margin: 1rem 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        /* BANNER & LAYOUT */
+        .banner-container { width: 100%; max-height: 300px; overflow: hidden; margin-bottom: 2rem; }
+        .banner-container img {
+            width: 100%;
+            display: block;
+            filter: invert(1) contrast(1.2);
+            mix-blend-mode: multiply;
+        }
+
+        .content { padding: 0 20px; position: relative; z-index: 1; }
+        
+        /* HEADERS */
+        h1, h2 { font-family: Georgia, serif; }
+        h1 { font-size: 1.8rem; font-weight: 600; margin-bottom: 2rem; }
+        h2 { font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid #999999; padding-bottom: 0.5rem; }
+        
+        p { margin-bottom: 1.2rem; }
+        ul { list-style-type: none; padding-left: 0; }
+        li { margin-bottom: 0.8rem; }
+        
+        /* LINKS */
+        a { font-family: Georgia, serif; color: #2c4a73; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .forthcoming { font-style: italic; color: #555555; }
+    </style>
+</head>
+<body>
+
+    <div class="texture-overlay"></div>
+
+    <div class="banner-container">
+        <img src="banner.png" alt="Dylan Harrington Banner | Scarab & Boulder">
+    </div>
+
+    <div class="content">
+        <h1>Dylan Harrington</h1>
+
+        <p>Dylan Harrington is a disabled OIR Navy veteran and former CTR2(SW) who served aboard the USS O'Kane (DDG-77). He graduated <em>summa cum laude</em> from Southern New Hampshire University with a BA in English and Creative Writing. His literary focus centers heavily on <span class="ghost-highlight">experimentalism</span>.</p>
+
+        <p>He is an advocate for the survivors of the North Fox Island abuse ring and resides in Michigan with his wife and children. He is also the founder of <strong>The Open Sores Project</strong>, an aspiring not-for-profit organization that seeks to amplify the voices of individuals living with trauma and disabilities.</p>
+
+        <div class="epigraph-container">
+            <p class="epigraph-text">"This writer has proved volatile and difficult to work with. He is the first and only writer on our blacklist."</p>
+            <p class="epigraph-source">— OPEN: Journal of Art & Letters (June, 2026)</p>
+        </div>
+
+        <h2>Selected Work</h2>
+        <ul>
+            <li class="featured-forthcoming">
+                <span class="forthcoming">Forthcoming:</span> <strong>"Note: Entropy"</strong> (Poetry) &amp; <strong>"Discharge: [CTL+A] Liability"</strong> (Visual Art) – Featured in <em>Double Dutch Magazine</em> (Issue No. 5, September 2026)
+            </li>
+            <li><strong>Tales from the Toiletside: A Metamorphosis and Other Absurdities</strong> – <a href="https://www.amazon.com/dp/B0DTWNZL6F" target="_blank">Available via Amazon KDP</a> (Crisis-Writing Collection)</li>
+            <li><strong>Punt Volat</strong> – <a href="https://puntvolatlit.com/america-land-of/" target="_blank">America, Land of...</a></li>
+            <li><strong class="blur-word">The War Horse</strong> – <a href="https://thewarhorse.org/navy-veteran-creates-his-own-ptsd-treatment/" target="_blank">Navy Veteran Creates His Own PTSD Treatment</a></li>
+            <li><span class="forthcoming">Forthcoming work with Blood Tree Literature and Infocalypse Arts & Literary Magazine.</span></li>
+        </ul>
+
+        <h2>Current Projects</h2>
+        <ul>
+            <li><strong>Anomie</strong> – A work of experimental weird fiction exploring systemic collapse and <span class="heavy-press">alienation</span>. (In Progress)</li>
+            <li><strong>The Liminal</strong> – A surreal metafiction novel. (In Progress)</li>
+        </ul>
+
+        <h2>Advocacy & Projects</h2>
+        <ul>
+            <li><strong>Traverse City Record-Eagle</strong> – <a href="https://www.record-eagle.com/" target="_blank">"Cadillac man petitions for North Fox Island monument"</a> (Print/Paywall)</li>
+            <li><strong>Audio Interview</strong> – <a href="https://soundcloud.com/ronjolly/dylan-harrington-n-fox" target="_blank">On Advocacy Efforts for North Fox Island</a> (WTCM Radio)</li>
+            <li><strong>The Open Sores Project</strong> – <a href="https://www.facebook.com/The-Open-Sores-Project-61572662221854" target="_blank">Facebook</a> | <a href="https://www.patreon.com/TheOpenSoresProject" target="_blank">Patreon</a></li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:dylanharrington@opensoresproject.com">dylanharrington@opensoresproject.com</a></p>
+    </div>
+
+</body>
+</html>
