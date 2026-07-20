@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dylan Harrington | Writer & Advocate</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
-    
     <style>
         body {
-            font-family: 'EB Garamond', Georgia, "Times New Roman", serif;
+            font-family: "Georgia Pro", Georgia, serif;
             font-size: 14pt; 
             line-height: 1.6;
             color: #111111; 
@@ -111,7 +107,7 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
         }
         .portrait-caption {
-            font-family: Georgia, serif;
+            font-family: "Georgia Pro Semi-condensed", "Georgia Semi-condensed", Georgia, serif;
             font-style: italic;
             font-size: 0.95rem;
             color: #444444;
@@ -120,7 +116,7 @@
         }
 
         .epigraph-container {
-            font-family: Georgia, serif;
+            font-family: "Georgia Pro Condensed", "Georgia Condensed", Georgia, serif;
             text-align: center;
             margin: 2.5rem auto;
             max-width: 500px;
@@ -140,12 +136,19 @@
             text-transform: uppercase;
         }
 
-        .featured-forthcoming {
-            border: 1px dashed #555555;
+        /* Callout Boxes for Highlights */
+        .featured-box {
             padding: 12px 16px;
             margin: 1rem 0;
-            background-color: rgba(255, 255, 255, 0.3);
             border-radius: 4px;
+        }
+        .style-forthcoming {
+            border: 1px dashed #555555;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .style-published {
+            border: 1px solid #555555;
+            background-color: rgba(150, 0, 0, 0.05);
         }
 
         .banner-container { width: 100%; max-height: 300px; overflow: hidden; margin-bottom: 2rem; }
@@ -158,7 +161,7 @@
 
         .content { padding: 0 20px; position: relative; z-index: 1; }
         
-        h1, h2 { font-family: Georgia, serif; }
+        h1, h2 { font-family: "Georgia Pro Cond", "Georgia Condensed", "Georgia Pro Semi-condensed", "Georgia Semi-condensed", Georgia, serif; }
         h1 { font-size: 1.8rem; font-weight: 600; margin-bottom: 2rem; }
         h2 { font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid #999999; padding-bottom: 0.5rem; }
         
@@ -166,9 +169,9 @@
         ul { list-style-type: none; padding-left: 0; }
         li { margin-bottom: 0.8rem; }
         
-        a { font-family: Georgia, serif; color: #2c4a73; text-decoration: none; }
+        a { font-family: "Georgia Pro Semi-condensed", "Georgia Semi-condensed", Georgia, serif; color: #2c4a73; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .forthcoming { font-style: italic; color: #555555; }
+        .forthcoming { font-family: "Georgia Pro Condensed", "Georgia Condensed", Georgia, serif; font-style: italic; color: #555555; }
         
         .project-link {
             font-weight: 800;
@@ -198,18 +201,18 @@
 
         <h2>Selected Work</h2>
         <ul>
-            <li class="featured-forthcoming">
+            <li class="featured-box style-forthcoming">
                 <span class="forthcoming">Forthcoming:</span> <strong>"Note: Entropy"</strong> (Poetry) &amp; <strong>"Discharge: [CTL+A] Liability"</strong> (Visual Art) – Featured in <em>Double Dutch Magazine</em> (Issue No. 5, September 2026)
             </li>
-            <li class="featured-forthcoming" style="border-style: solid; background-color: rgba(150, 0, 0, 0.05);">
+            <li class="featured-box style-published">
                 <a href="https://www.bloodtreeliterature.com/i17-climate-issue/wish-you-were-here-dylan-harrington" target="_blank">
                     <span class="ghost-faint">"Wish you were Here"</span> (Hybrid) – Published in <span class="eerie-red">Blood Tree Literature</span> (Issue 17, July 2026)
                 </a>
             </li>
+            <li><strong>"Dissociation and Disillusionment"</strong> – Published in <a href="https://www.infocalypse.press/issue-3-all-we-ever-wanted-was-everything/" target="_blank">Infocalypse Arts &amp; Literary Magazine</a> (Issue 3: All We Ever Wanted Was Everything, July 2026)</li>
             <li><strong>Tales from the Toiletside: A Metamorphosis and Other Absurdities</strong> – <a href="https://www.amazon.com/dp/B0DTWNZL6F" target="_blank">Available via Amazon KDP</a> (Crisis-Writing Collection)</li>
             <li><strong>Punt Volat</strong> – <a href="https://puntvolatlit.com/america-land-of/" target="_blank">America, Land of...</a></li>
             <li><strong class="blur-word">The War Horse</strong> – <a href="https://thewarhorse.org/navy-veteran-creates-his-own-ptsd-treatment/" target="_blank">Navy Veteran Creates His Own PTSD Treatment</a></li>
-            <li><span class="forthcoming">Forthcoming work with Infocalypse Arts & Literary Magazine.</span></li>
         </ul>
 
         <h2>Current Projects</h2>
@@ -222,21 +225,6 @@
         <ul>
             <li><strong>Traverse City Record-Eagle</strong> – <a href="https://www.record-eagle.com/" target="_blank">"Cadillac man petitions for North Fox Island monument"</a> (Print/Paywall)</li>
             <li><strong>Audio Interview</strong> – <a href="https://soundcloud.com/ronjolly/dylan-harrington-n-fox" target="_blank">On Advocacy Efforts for North Fox Island</a> (WTCM Radio)</li>
-            <li><strong>The Open Sores Project</strong> – <a href="/opensores/">Manifesto Portal</a> | <a href="https://www.facebook.com/The-Open-Sores-Project-61572662221854" target="_blank">Facebook</a> | <a href="https://www.patreon.com/TheOpenSoresProject" target="_blank">Patreon</a></li>
-        </ul>
-
-        <div class="portrait-frame">
-            <img src="FB_IMG_1591371463100.jpg" alt="Dylan Harrington childhood portrait">
-            <div class="portrait-caption">Dylan Harrington, metamorphosizing.</div>
-        </div>
-
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:dylanharrington@opensoresproject.com">dylanharrington@opensoresproject.com</a></p>
-    </div>
-
-</body>
-</html>
- – <a href="https://soundcloud.com/ronjolly/dylan-harrington-n-fox" target="_blank">On Advocacy Efforts for North Fox Island</a> (WTCM Radio)</li>
             <li><strong>The Open Sores Project</strong> – <a href="/opensores/">Manifesto Portal</a> | <a href="https://www.facebook.com/The-Open-Sores-Project-61572662221854" target="_blank">Facebook</a> | <a href="https://www.patreon.com/TheOpenSoresProject" target="_blank">Patreon</a></li>
         </ul>
 
