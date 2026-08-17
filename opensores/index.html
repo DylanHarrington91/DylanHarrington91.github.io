@@ -3,158 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Open Sores Project | Manifesto</title>
+    <title>The Open Sores Project</title>
     <style>
         body {
-            font-family: Georgia, serif;
+            font-family: "Georgia Pro", Georgia, serif;
             font-size: 14pt;
-            line-height: 1.6;
-            color: #e2e2e2;
-            background-color: #000000;
-            max-width: 650px;
-            margin: 0 auto 80px auto;
+            line-height: 1.7;
+            color: #dcdcd9;
+            background-color: #0d0d0f;
+            max-width: 600px;
+            margin: 0 auto 60px auto;
             padding: 0;
             letter-spacing: -0.2px;
+
+            background-image: 
+                radial-gradient(ellipse at 25% 15%, rgba(40, 40, 50, 0.25) 0%, transparent 45%),
+                radial-gradient(circle at 75% 65%, rgba(70, 10, 10, 0.25) 0%, transparent 55%),
+                radial-gradient(circle at 50% 85%, rgba(20, 20, 25, 0.3) 0%, transparent 50%);
+            background-size: 100% 100%;
+            background-attachment: fixed;
         }
 
-        /* BANNER CONFIGURATION */
+        .texture-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.025' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+            opacity: 0.25;
+            backdrop-filter: blur(0.3px) contrast(1.15);
+            -webkit-backdrop-filter: blur(0.3px) contrast(1.15);
+            animation: drift 150s linear infinite;
+        }
+
+        @keyframes drift { from { background-position: 0 0; } to { background-position: 0 100%; } }
+
         .banner-container { 
             width: 100%; 
             max-height: 250px; 
             overflow: hidden; 
-            margin-bottom: 3rem; 
+            margin-bottom: 2.5rem; 
         }
+
         .banner-container img {
             width: 100%;
             display: block;
             object-fit: cover;
+            filter: contrast(1.1) brightness(0.85);
         }
 
-        .content-container {
-            width: 100%;
+        .content {
             padding: 0 20px;
-            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: "Georgia Pro Cond", "Georgia Condensed", Georgia, serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
         }
 
         p {
-            margin-bottom: 1.8rem;
-            text-align: left;
+            margin-bottom: 1.5rem;
         }
 
-        /* CHIMERA TYPOGRAPHIC CONTRASTS */
-        .heavy {
-            font-weight: 800;
-            color: #ffffff;
-        }
-
-        .faded {
-            color: rgba(226, 226, 226, 0.55);
-        }
-
-        /* CENTERED ITALIC MANIFESTO BLOCK */
-        .manifesto-statement {
-            text-align: center;
-            font-style: italic;
-            font-size: 1.2rem;
-            margin: 3rem 0;
-            line-height: 1.5;
-            color: #ffffff;
-        }
-
-        .manifesto-statement span {
-            display: block;
-        }
-
-        /* ASYMMETRICAL CALL TO ACTION ENTRANCE */
-        .closing-callout {
-            text-align: center;
-            margin-top: 4rem;
-            margin-bottom: 4rem;
-            line-height: 1.5;
-            border-top: 1px dashed rgba(255, 255, 255, 0.15);
-            padding-top: 2rem;
-        }
-
-        .closing-callout .status {
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #ffffff;
-        }
-
-        .closing-callout .action {
-            font-size: 1.15rem;
-            font-style: italic;
-        }
-
-        .closing-callout a {
+        a {
             color: #ffffff;
             text-decoration: underline;
             font-weight: bold;
-            font-style: normal;
         }
 
-        .closing-callout a:hover {
-            color: #e2e2e2;
+        a:hover {
+            color: #dcdcd9;
         }
 
-        /* EXTERNAL HUB PORTALS */
-        .portal-links {
-            text-align: center;
+        .inquire-block {
             margin-top: 3rem;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-        }
-
-        .portal-links a {
-            color: rgba(226, 226, 226, 0.7);
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 12px;
-        }
-
-        .portal-links a:hover {
-            color: #ffffff;
-            text-decoration: underline;
+            padding-top: 1.5rem;
+            border-top: 1px dashed rgba(255, 255, 255, 0.2);
+            font-style: italic;
         }
     </style>
 </head>
 <body>
 
+    <div class="texture-overlay"></div>
+
     <div class="banner-container">
         <img src="banner.png" alt="The Open Sores Project Banner">
     </div>
 
-    <div class="content-container">
-        <p>The Open Sores Project exists to <span class="heavy">encourage vulnerability</span>, validate individuals living with trauma and/or disabilities, raise awareness, and serve as an intentional attempt to get the public <span class="heavy">interested in the arts again</span>.</p>
-        
-        <p class="faded">We seek work that focuses on quiet recoveries/declines as opposed to shocking spectacles—literature that challenges perspectives and promotes awareness and reflection.</p>
-        
-        <p>Through vulnerability and emotional honesty, this project seeks to highlight humanity’s <span class="heavy">interconnectedness</span>.</p>
+    <div class="content">
+        <h1>The Open Sores Project</h1>
 
-        <p class="manifesto-statement">
-            <span>We are not interested in the shock of a stab.</span>
-            <span>We are interested in the infection and/or healing that follows.</span>
-        </p>
+        <p>Founded by <a href="../">Dylan Harrington</a>. This project exists to encourage vulnerability, raise awareness, and amplify the voices of individuals with trauma and/or disabilities.</p>
 
-        <p>Publishers too often seek <span class="faded">clean narratives</span>, redemptive stories with emotional endings, and unrealistic expectations that do not reflect reality. By focusing solely on "hope and recovery," many publications inadvertently impose a required narrative arc that ignores the complex, non-linear, and often <span class="heavy">"ugly" reality</span> of living with trauma or chronic conditions. These manufactured structures ultimately commercialize individuals for profit.</p>
-        
-        <p>Life rarely follows a tidy redemption arc. By welcoming "ugly declines/consequences," we are promoting a radical form of <span class="heavy">authenticity</span>. This will attract the most honest, resonant work that often gets rejected by editors looking for a clear "lesson learned."</p>
-        
-        <p class="faded">The act of externalizing, describing, and shaping the "ugliness" into art (rather than shaping it toward a required happy ending) is often the most powerful stage of processing. We are creating a space for unfiltered self-discovery. We are looking at the whole, messy process, not just the sanitized conclusion.</p>
+        <p>This Project plans to hybridize literary publishing with communal awareness and is still in the formative stages.</p>
 
-        <div class="closing-callout">
-            <span class="status">The Open Sores Project is still in its formative stages.This page exists as a temporary placeholder while the main site is being built.</span>
-            <span class="action">To get involved, inquire <a href="mailto:dylanharrington@opensoresproject.com">dylanharrington@opensoresproject.com</a></span>
-        </div>
-
-        <div class="portal-links">
-            <a href="https://www.facebook.com/The-Open-Sores-Project-61572662221854" target="_blank">Facebook Portal</a>
-            <span class="faded">•</span>
-            <a href="https://www.patreon.com/TheOpenSoresProject" target="_blank">Patreon Archive</a>
+        <div class="inquire-block">
+            Inquire: <a href="mailto:dylanharrington@opensoresproject.com">dylanharrington@opensoresproject.com</a>
         </div>
     </div>
 
